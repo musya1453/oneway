@@ -1,0 +1,26 @@
+.header-wrapper {
+
+  .header-bottom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 22px;
+    z-index: 1;
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+
+        a {
+          display: block;
+          color: #244363;
+        }
+      }
+    }
+  }
+}

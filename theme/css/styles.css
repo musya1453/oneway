@@ -412,3 +412,40 @@ body {
 .pull-right {
   float: right;
 }
+
+.container {
+  max-width: 1142px;
+  margin: 0 auto;
+}
+
+.content-wrapper .section-top {
+  background: url('../images/bg/section-top.jpg');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 220px 0 0;
+}
+
+.header-wrapper .header-bottom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 22px;
+  z-index: 1;
+}
+.header-wrapper .header-bottom nav ul {
+  margin: 0;
+  padding: 0;
+}
+.header-wrapper .header-bottom nav ul li {
+  display: inline-block;
+}
+.header-wrapper .header-bottom nav ul li a {
+  display: block;
+  color: #244363;
+}

@@ -1,3 +1,16 @@
-.content-wrapper{
+.container {
+  max-width: 1142px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+
+  .section-top {
+    background: image-url('bg/section-top.jpg');
+    @include background-size(cover);
+    text-align: center;
+    color: #fff;
+    padding: 220px 0 0 ;
+  }
 
 }
