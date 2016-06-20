@@ -1,4 +1,46 @@
 .header-wrapper {
+  position: relative;
+
+  .header-top {
+    position: relative;
+    padding: 19px 0px;
+
+    .logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 150px;
+    }
+
+    .tel {
+      display: inline-block;
+      min-width: 245px;
+      background: #f2f7fd;
+      font-size: 24px;
+      padding: 8px 26px;
+      color: #244363;
+      text-decoration: none;
+      text-align: center;
+      vertical-align: middle;
+      margin-right: 35px;
+      @include transition(all .3s);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background: #399bda;
+        color: #fff;
+      }
+
+      span {
+        display: block;
+        font-size: 27px;
+        font-family: $open-sans-bold;
+      }
+    }
+
+  }
 
   .header-bottom {
     position: absolute;
@@ -9,16 +51,33 @@
     font-size: 22px;
     z-index: 1;
 
-    nav ul {
+    .nav > ul {
       margin: 0;
       padding: 0;
 
-      li {
+      & > li {
         display: inline-block;
+        position: relative;
+
+        &:hover > a {
+          background: #fff;
+        }
 
         a {
           display: block;
           color: #244363;
+          font-family: $open-sans-semibold;
+          text-decoration: none;
+          padding: 32px;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #fff;
         }
       }
     }

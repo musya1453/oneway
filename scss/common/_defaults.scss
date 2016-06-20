@@ -6,6 +6,8 @@ body {
   min-height: 100%;
   height: 100%;
   font-size: 14px;
+  font-family: $open-sans-regular;
+  color: #666666;
 }
 
 .clearfix {
@@ -29,4 +31,8 @@ body {
 
 .pull-right {
   float: right;
+}
+
+*{
+  @include box-sizing(border-box);
 }
