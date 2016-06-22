@@ -54,10 +54,14 @@
     .nav > ul {
       margin: 0;
       padding: 0;
+      @include clearfix();
 
       & > li {
         display: inline-block;
         position: relative;
+        float: left;
+        width: 14.2%;
+        text-align: center;
 
         &:hover > a {
           background: #fff;
@@ -68,7 +72,12 @@
           color: #244363;
           font-family: $open-sans-semibold;
           text-decoration: none;
-          padding: 32px;
+          padding: 32px 15px;
+        }
+
+        &:hover ul {
+          opacity: 1;
+          visibility: visible;
         }
 
         ul {
@@ -78,6 +87,21 @@
           top: 100%;
           left: 0;
           background: #fff;
+          list-style: none;
+          opacity: 0;
+          visibility: hidden;
+          @include transition(all .3s);
+
+          a {
+            font-family: $open-sans-light;
+            white-space: nowrap;
+            padding: 15px 50px 15px 30px;
+            text-align: left;
+
+            &:hover {
+              background: #f2f7fd;
+            }
+          }
         }
       }
     }

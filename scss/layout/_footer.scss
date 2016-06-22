@@ -1,0 +1,41 @@
+.footer-wrapper {
+  background: image-url('bg/footer-bg.jpg');
+
+  .footer {
+    @include clearfix();
+    font-size: 16px;
+    padding: 50px 0;
+
+    a {
+      text-decoration: none;
+      color: #cbcccd;
+      @include transition(all .3s);
+
+      &:hover {
+        color: #5cbde8;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 35px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .nav {
+      float: right;
+    }
+
+    .social {
+      float: left;
+    }
+  }
+}

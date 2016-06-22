@@ -446,16 +446,169 @@ body {
   max-width: 1142px;
   margin: 0 auto;
 }
+.container:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
 
 .content-wrapper .section-top {
-  background: url('../images/bg/section-top.jpg');
+  position: relative;
+}
+.content-wrapper .section-top .desc {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+}
+.content-wrapper .section-top h1 {
+  margin: 0 0 30px;
+  font-size: 48px;
+}
+.content-wrapper .section-top h2 {
+  margin: 0;
+  font-size: 36px;
+}
+.content-wrapper .section-top img {
+  width: 100%;
+}
+.content-wrapper .section-items {
+  background: url('../images/bg/items.png') no-repeat center;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin-top: -100px;
+  position: relative;
+}
+.content-wrapper .section-items .container {
+  padding-bottom: 100px;
+}
+.content-wrapper .section-items .item {
+  width: 360px;
+  display: inline-block;
+  margin-right: 25px;
+  vertical-align: top;
+}
+.content-wrapper .section-items .item:last-child {
+  margin-right: 0;
+}
+.content-wrapper .section-items .item .title {
+  font-size: 28px;
+  color: #cdd6e3;
+  font-family: "open-sans-bold";
+  background: #155597;
+  -moz-box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.34);
+  padding: 30px 55px;
+  position: relative;
+}
+.content-wrapper .section-items .item .item-body {
+  background: #215b96;
+  color: #fff;
+  padding: 30px 20px;
+  font-size: 16px;
+}
+.content-wrapper .section-items .item .item-body h4 {
+  margin: 0 0 30px;
+  font-size: 24px;
+}
+.content-wrapper .section-items .item .item-body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.content-wrapper .section-items .item .item-body ul li {
+  margin: 0 0 10px;
+}
+.content-wrapper .section-items .item .item-body ul li span {
+  display: inline-block;
+  font-family: "open-sans-bold";
+  width: 100px;
+}
+.content-wrapper .section-items .item .text {
+  text-align: center;
+  padding: 30px;
+  font-size: 16px;
+  background: #f1faff;
+}
+.content-wrapper .section-links {
+  background: #f2f7fd;
+  font-size: 24px;
+  padding: 90px 0;
+}
+.content-wrapper .section-links a {
+  text-decoration: none;
+  color: #666666;
+}
+.content-wrapper .section-links a:hover {
+  color: #40b5e6;
+}
+.content-wrapper .section-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.content-wrapper .section-links ul li {
+  margin: 0 0 15px;
+}
+.content-wrapper .section-links h3 {
+  color: #10477f;
+  font-size: 36px;
+  font-family: "open-sans-bold";
+  text-transform: uppercase;
+  margin: 0 0 60px;
+}
+.content-wrapper .section-links .left-part, .content-wrapper .section-links .right-part {
+  width: 50%;
+  float: left;
+}
+.content-wrapper .section-links .article {
+  margin-bottom: 35px;
+  display: block;
+}
+.content-wrapper .section-links .article:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.content-wrapper .section-links .article .img {
+  float: left;
+  margin-right: 24px;
+}
+.content-wrapper .section-links .article .text {
+  overflow: hidden;
+}
+.content-wrapper .section-links .article .text h4 {
+  margin: 0px 0 6px;
+}
+.content-wrapper .section-links .article .text .date {
+  font-size: 18px;
+}
+.content-wrapper .section-desc {
+  padding: 135px 0;
+  background: url('../images/bg/bg-bot.jpg') no-repeat center;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center;
+  font-size: 24px;
   color: #fff;
-  padding: 220px 0 0;
+}
+.content-wrapper .section-desc h2 {
+  font-size: 48px;
+  font-family: "open-sans-bold";
+  margin: 0 0 30px;
 }
 
 .header-wrapper {
@@ -511,9 +664,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.header-wrapper .header-bottom .nav > ul:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
 .header-wrapper .header-bottom .nav > ul > li {
   display: inline-block;
   position: relative;
+  float: left;
+  width: 14.2%;
+  text-align: center;
 }
 .header-wrapper .header-bottom .nav > ul > li:hover > a {
   background: #fff;
@@ -523,7 +687,11 @@ body {
   color: #244363;
   font-family: "open-sans-semibold";
   text-decoration: none;
-  padding: 32px;
+  padding: 32px 15px;
+}
+.header-wrapper .header-bottom .nav > ul > li:hover ul {
+  opacity: 1;
+  visibility: visible;
 }
 .header-wrapper .header-bottom .nav > ul > li ul {
   margin: 0;
@@ -532,4 +700,64 @@ body {
   top: 100%;
   left: 0;
   background: #fff;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header-wrapper .header-bottom .nav > ul > li ul a {
+  font-family: "open-sans-light";
+  white-space: nowrap;
+  padding: 15px 50px 15px 30px;
+  text-align: left;
+}
+.header-wrapper .header-bottom .nav > ul > li ul a:hover {
+  background: #f2f7fd;
+}
+
+.footer-wrapper {
+  background: url('../images/bg/footer-bg.jpg');
+}
+.footer-wrapper .footer {
+  font-size: 16px;
+  padding: 50px 0;
+}
+.footer-wrapper .footer:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.footer-wrapper .footer a {
+  text-decoration: none;
+  color: #cbcccd;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-wrapper .footer a:hover {
+  color: #5cbde8;
+}
+.footer-wrapper .footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer-wrapper .footer ul li {
+  display: inline-block;
+  margin-right: 35px;
+}
+.footer-wrapper .footer ul li:last-child {
+  margin-right: 0;
+}
+.footer-wrapper .footer .nav {
+  float: right;
+}
+.footer-wrapper .footer .social {
+  float: left;
 }
