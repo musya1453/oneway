@@ -5,6 +5,10 @@
     initMobileMenu()
   });
 
+  $(window).resize(function(){
+    initMobileMenu()
+  });
+
   function initAccordeon() {
     var $wrapper = $('.section-faq ul li'),
       $item = $wrapper.find('>a');

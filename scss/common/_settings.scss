@@ -6,7 +6,8 @@ $experimental-support-for-svg: true;
 $experimental-support-for-opera: false;
 
 //width
-
+$bp-small: 768px;
+$bp-middle: 1142px;
 //fonts
 
 $open-sans-semibold: 'open-sans-semibold';
@@ -14,3 +15,11 @@ $open-sans-bold: 'open-sans-bold';
 $open-sans-regular: 'open-sans-regular';
 $open-sans-light: 'open-sans-light';
 $Impact: 'Impact';
+
+@media (min-width: $bp-small) {
+
+}
+
+@media (min-width: $bp-middle) {
+
+}
