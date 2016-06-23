@@ -3572,6 +3572,12 @@ body:not(.front) .content-wrapper .section-top h2 {
 .header-wrapper .header-top {
   position: relative;
   padding: 19px 0px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header-wrapper .header-top {
+    text-align: left;
+  }
 }
 .header-wrapper .header-top .logo {
   display: inline-block;
@@ -3582,17 +3588,24 @@ body:not(.front) .content-wrapper .section-top h2 {
   display: inline-block;
   min-width: 245px;
   background: #f2f7fd;
-  font-size: 24px;
+  font-size: 18px;
   padding: 8px 26px;
   color: #244363;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
-  margin-right: 22px;
+  margin-bottom: 10px;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media (min-width: 768px) {
+  .header-wrapper .header-top .tel {
+    font-family: 24;
+    margin-right: 22px;
+    margin-bottom: 0;
+  }
 }
 .header-wrapper .header-top .tel:last-child {
   margin-right: 0;
@@ -3603,8 +3616,13 @@ body:not(.front) .content-wrapper .section-top h2 {
 }
 .header-wrapper .header-top .tel span {
   display: block;
-  font-size: 27px;
+  font-size: 21px;
   font-family: "open-sans-bold";
+}
+@media (min-width: 768px) {
+  .header-wrapper .header-top .tel span {
+    font-size: 27px;
+  }
 }
 .header-wrapper .header-top .tel span i {
   display: inline-block;
