@@ -11,9 +11,20 @@
     }
 
     .logo {
-      display: inline-block;
+      display: block;
       vertical-align: middle;
-      margin-right: 150px;
+      margin: 0 auto;
+      width: 100px;
+
+      @media (min-width: $bp-small) {
+        margin: 0 150px 0 0;
+        width: auto;
+        display: inline-block;
+      }
+
+      img {
+        max-width: 100%;
+      }
     }
 
     .tel {

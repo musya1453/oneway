@@ -454,6 +454,10 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+.outer-wrapper {
+  overflow-x: hidden;
+}
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3238,14 +3242,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .content-wrapper .section-top {
   position: relative;
+  min-height: 400px;
 }
 .content-wrapper .section-top .desc {
   position: absolute;
-  top: 200px;
+  top: 0;
   left: 0;
   right: 0;
   text-align: center;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .content-wrapper .section-top .desc {
+    top: 200px;
+  }
 }
 .content-wrapper .section-top h1 {
   margin: 0 0 30px;
@@ -3580,9 +3590,20 @@ body:not(.front) .content-wrapper .section-top h2 {
   }
 }
 .header-wrapper .header-top .logo {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
-  margin-right: 150px;
+  margin: 0 auto;
+  width: 100px;
+}
+@media (min-width: 768px) {
+  .header-wrapper .header-top .logo {
+    margin: 0 150px 0 0;
+    width: auto;
+    display: inline-block;
+  }
+}
+.header-wrapper .header-top .logo img {
+  max-width: 100%;
 }
 .header-wrapper .header-top .tel {
   display: inline-block;
