@@ -1,0 +1,19 @@
+.btn-wrap {
+
+  &.style-a .btn {
+    background: #399bda;
+    color: #fff;
+    font-size: 16px;
+    font-family: $open-sans-semibold;
+    display: inline-block;
+    text-decoration: none;
+    padding: 9px 30px;
+    border: 2px solid #399bda;
+    @include transition(all .3s);
+
+    &:hover {
+      color: #399bda;
+      background: none;
+    }
+  }
+}

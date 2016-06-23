@@ -36,6 +36,17 @@
 
     .social {
       float: left;
+
+      a{
+        display: inline-block;
+      }
+
+      i {
+        font-size: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
     }
   }
 }

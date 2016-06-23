@@ -6,6 +6,7 @@
 @import "common/settings";
 @import "common/normalize";
 @import "common/defaults";
+@import "common/font-awesome";
 
 //forms
 @import "forms/forms";
@@ -14,5 +15,12 @@
 @import "layout/content";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/btn";
+
+@import "layout/menu";
+
 
 //blocks
+//page
+@import "page/inner";
+@import "page/blog";

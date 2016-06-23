@@ -1,0 +1,39 @@
+.page-inner {
+
+  .content-wrapper {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 70px 0 0;
+
+    .img.pull-right {
+      margin: 0 0 20px 30px;
+    }
+
+    .list {
+
+      li {
+        position: relative;
+        padding-left: 16px;
+        list-style: none;
+        margin-bottom: 18px;
+
+        &:before {
+          @include pseudo-block($top: 8px, $left: 0);
+          @include oneline-sprite-box($icons, arr-list);
+        }
+      }
+    }
+
+    .section-links {
+      margin-top: 80px;
+    }
+
+    .img.pull-right + p {
+      overflow: hidden;
+    }
+
+    h2 {
+      margin: 60px 0 30px;
+    }
+  }
+}

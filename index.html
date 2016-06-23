@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <script type="text/javascript" src="theme/js/lib/html5.js"></script>
   <script type="text/javascript" src="theme/js/jquery.min.js"></script>
+  <script type="text/javascript" src="theme/js/lib/modernizr.custom.js"></script>
+  <script type="text/javascript" src="theme/js/lib/jquery.dlmenu.js"></script>
   <script type="text/javascript" src="theme/js/js.js"></script>
   <link href="theme/css/styles.css" rel="stylesheet" type="text/css">
 </head>
@@ -21,40 +23,39 @@
         <div class="logo"><a href=""><img src="theme/images/logo.png" alt=""/></a></div>
         <a href="" class="tel">
           Mermaid Beach
-          <span>07 5527 7500</span>
+          <span><i class="fa fa-phone-square" aria-hidden="true"></i>07 5527 7500</span>
         </a>
 
         <a href="" class="tel">
           Labrador
-          <span> 07 5571 1303</span>
+          <span><i class="fa fa-phone-square" aria-hidden="true"></i> 07 5571 1303</span>
         </a>
 
         <a href="" class="tel">
           Kallangur
-          <span> 07 3285 5977</span>
+          <span><i class="fa fa-phone-square" aria-hidden="true"></i> 07 3285 5977</span>
         </a>
       </div>
     </div>
 
-    <div class="header-bottom">
-      <div class="container">
-        <nav class="nav">
-          <ul>
-            <li><a href="">Home </a></li>
-            <li><a href=""> About us </a></li>
-            <li><a href=""> Find us </a>
-              <ul>
-                <li><a href="">Mermaid Beach</a></li>
-                <li><a href=""> Labrador</a></li>
-                <li><a href=""> Kallangur</a></li>
-              </ul>
-            </li>
-            <li><a href=""> Patients </a></li>
-            <li><a href=""> Treatment </a></li>
-            <li><a href=""> Blog </a></li>
-            <li><a href=""> Contact us</a></li>
-          </ul>
-        </nav>
+    <div  class="header-bottom">
+      <div id="dl-menu" class="container dl-menuwrapper">
+        <button class="dl-trigger">Open Menu</button>
+        <ul class="dl-menu">
+          <li><a href="">Home </a></li>
+          <li><a href=""> About us </a></li>
+          <li><a href=""> Find us </a>
+            <ul class="dl-submenu">
+              <li><a href="">Mermaid Beach</a></li>
+              <li><a href=""> Labrador</a></li>
+              <li><a href=""> Kallangur</a></li>
+            </ul>
+          </li>
+          <li><a href=""> Patients </a></li>
+          <li><a href=""> Treatment </a></li>
+          <li><a href=""> Blog </a></li>
+          <li><a href=""> Contact us</a></li>
+        </ul>
       </div>
     </div>
 
@@ -75,7 +76,7 @@
     <section class="section-items">
       <div class="container">
         <div class="item">
-          <div class="title">Mermaid Beach</div>
+          <a href="#" class="title"><i class="fa fa-map-marker" aria-hidden="true"></i>Mermaid Beach</a>
           <div class="item-body">
             <h4>Clinic Hours</h4>
             <ul>
@@ -95,7 +96,7 @@
         </div>
 
         <div class="item">
-          <div class="title">Labrador</div>
+          <a href="#" class="title"><i class="fa fa-map-marker" aria-hidden="true"></i>Labrador</a>
           <div class="item-body">
             <h4>Clinic Hours</h4>
             <ul>
@@ -115,7 +116,7 @@
         </div>
 
         <div class="item">
-          <div class="title">Kallangur</div>
+          <a href="#" class="title"><i class="fa fa-map-marker" aria-hidden="true"></i>Kallangur</a>
           <div class="item-body">
             <h4>Clinic Hours</h4>
             <ul>
@@ -141,12 +142,12 @@
         <div class="left-part">
           <h3>Our Resources</h3>
           <ul>
-            <li><a href=""> Dynamic natural healing</a></li>
-            <li><a href=""> Spinal support</a></li>
-            <li><a href=""> Children and chiropractic</a></li>
-            <li><a href=""> Paediatric chiropractic</a></li>
-            <li><a href=""> Chiro care and pregnancy</a></li>
-            <li><a href=""> Drug free pain control</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dynamic natural healing</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Spinal support</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Children and chiropractic</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Paediatric chiropractic</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Chiro care and pregnancy</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Drug free pain control</a></li>
           </ul>
         </div>
 
@@ -197,8 +198,8 @@
   <footer class="footer-wrapper">
     <div class="footer container">
       <ul class="social">
-        <li><a href="">Youtube</a></li>
-        <li><a href=""> Twitter</a></li>
+        <li><a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i>Youtube</a></li>
+        <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
       </ul>
 
       <ul class="nav">
