@@ -23,7 +23,7 @@
       }
 
       @media (min-width: $bp-middle) {
-        margin: 0 150px 0 0;
+        margin: 0 135px 0 0;
       }
 
       img {
@@ -143,8 +143,9 @@
             width: 14.2%;
             text-align: center;
 
-            &:hover > a {
+            &:hover > a, &.active a {
               background: #fff;
+              color: #244363;
             }
 
             a {
@@ -180,6 +181,7 @@
               opacity: 0;
               visibility: hidden;
               @include transition(all .3s);
+              min-width: 100%;
 
               a {
                 font-family: $open-sans-light;

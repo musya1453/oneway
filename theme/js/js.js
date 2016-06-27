@@ -29,7 +29,7 @@
   }
 
   function initMobileMenu() {
-    if ($(window).outerWidth() < 1142) {
+    if ($(window).outerWidth() < 1125) {
       $('#dl-menu').dlmenu();
     } else {
       return false;

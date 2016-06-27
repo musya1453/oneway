@@ -3306,6 +3306,8 @@ body:not(.front) .content-wrapper h2 {
   font-size: 22px;
   margin: 0 0 15px;
   text-shadow: none;
+  clear: both;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   body:not(.front) .content-wrapper h2 {
@@ -3921,7 +3923,7 @@ body:not(.front) .content-wrapper h2 {
 }
 @media (min-width: 1142px) {
   .header-wrapper .header-top .logo {
-    margin: 0 150px 0 0;
+    margin: 0 135px 0 0;
   }
 }
 .header-wrapper .header-top .logo img {
@@ -4047,8 +4049,9 @@ body:not(.front) .header-wrapper .header-bottom {
     width: 14.2%;
     text-align: center;
   }
-  .header-wrapper .header-bottom .dl-menuwrapper > ul > li:hover > a {
+  .header-wrapper .header-bottom .dl-menuwrapper > ul > li:hover > a, .header-wrapper .header-bottom .dl-menuwrapper > ul > li.active a {
     background: #fff;
+    color: #244363;
   }
   .header-wrapper .header-bottom .dl-menuwrapper > ul > li a {
     display: block;
@@ -4090,6 +4093,7 @@ body:not(.front) .header-wrapper .header-bottom {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    min-width: 100%;
   }
   .header-wrapper .header-bottom .dl-menuwrapper > ul > li ul a {
     font-family: "open-sans-light";
@@ -4221,7 +4225,7 @@ body:not(.front) .header-wrapper .header-bottom {
   background: none;
 }
 
-@media (max-width: 1142px) {
+@media (max-width: 1141px) {
   /* General Demo Style */
   @font-face {
     font-family: 'fontawesome';
@@ -4385,7 +4389,7 @@ body:not(.front) .header-wrapper .header-bottom {
     color: #89867e;
   }
 }
-@media screen and (max-width: 1142px) and (max-width: 46.0625em) {
+@media screen and (max-width: 1141px) and (max-width: 46.0625em) {
   .main {
     padding: 0;
   }
@@ -4407,7 +4411,7 @@ body:not(.front) .header-wrapper .header-bottom {
     background-position: 90px 3em;
   }
 }
-@media (max-width: 1142px) {
+@media (max-width: 1141px) {
   @font-face {
     font-family: 'icomoon';
     src: url("../fonts/icomoon.eot");
@@ -4443,14 +4447,14 @@ body:not(.front) .header-wrapper .header-bottom {
     outline: none;
   }
 }
-@media (max-width: 1142px) and (min-width: 767px) and (max-width: 1142px) {
+@media (max-width: 1141px) and (min-width: 767px) and (max-width: 1142px) {
   .dl-menuwrapper button {
     width: 56px;
     height: 56px;
   }
 }
 
-@media (max-width: 1142px) {
+@media (max-width: 1141px) {
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul {
@@ -4468,13 +4472,13 @@ body:not(.front) .header-wrapper .header-bottom {
     box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
   }
 }
-@media (max-width: 1142px) and (min-width: 767px) and (max-width: 1142px) {
+@media (max-width: 1141px) and (min-width: 767px) and (max-width: 1142px) {
   .dl-menuwrapper button:after {
     top: 15px;
   }
 }
 
-@media (max-width: 1142px) {
+@media (max-width: 1141px) {
   .dl-menuwrapper ul {
     padding: 0;
     list-style: none;
@@ -5478,4 +5482,24 @@ body:not(.front) .header-wrapper .header-bottom {
 .page-blog .content-wrapper .right-part a {
   color: #d6dde8;
   text-decoration: none;
+}
+
+.page-sitemap .content-wrapper .section-sitemap {
+  padding: 20px 15px;
+}
+@media (min-width: 768px) {
+  .page-sitemap .content-wrapper .section-sitemap {
+    padding: 60px 10px;
+  }
+}
+.page-sitemap .content-wrapper .section-sitemap li {
+  margin-bottom: 7px;
+}
+.page-sitemap .content-wrapper .section-sitemap a {
+  font-size: 18px;
+  color: #399bda;
+  text-decoration: none;
+}
+.page-sitemap .content-wrapper .section-sitemap a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,27 @@
+.page-sitemap {
+
+  .content-wrapper {
+
+    .section-sitemap {
+      padding: 20px 15px;
+
+      @media (min-width: $bp-small) {
+        padding: 60px 10px;
+      }
+
+      li {
+        margin-bottom: 7px;
+      }
+
+      a {
+        font-size: 18px;
+        color: #399bda;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
