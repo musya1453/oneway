@@ -4,7 +4,13 @@
   .footer {
     @include clearfix();
     font-size: 16px;
-    padding: 50px 0;
+    padding: 20px 0;
+    text-align: center;
+
+    @media (min-width: $bp-middle) {
+      padding: 50px 0;
+      text-align: left;
+    }
 
     a {
       text-decoration: none;
@@ -22,7 +28,11 @@
 
       li {
         display: inline-block;
-        margin-right: 35px;
+        margin: 0 10px 10px;
+
+        @media (min-width: $bp-middle) {
+          margin-right: 35px;
+        }
 
         &:last-child {
           margin-right: 0;
@@ -31,13 +41,19 @@
     }
 
     .nav {
-      float: right;
+
+      @media (min-width: $bp-middle) {
+        float: right;
+      }
     }
 
     .social {
-      float: left;
 
-      a{
+      @media (min-width: $bp-middle) {
+        float: left;
+      }
+
+      a {
         display: inline-block;
       }
 

@@ -1,31 +1,59 @@
 .page-blog {
 
   .content-wrapper {
-    padding: 70px 0 90px;
-    font-size: 18px;
+    padding: 30px 10px 50px;
+    font-size: 14px;
+
+    @media (min-width: $bp-small) {
+      padding: 70px 0 90px;
+    }
 
     .container {
       display: table;
+
+      @media (min-width: $bp-small) {
+        padding: 0 20px;
+      }
     }
 
     .left-part {
       display: table-cell;
-      width: 880px;
-      padding-right: 30px;
+      max-width: 880px;
+      padding-right: 50px;
+
+      @media (min-width: $bp-small) {
+        padding-right: 100px;
+      }
+
+      @media (min-width: $bp-middle) {
+        padding-right: 30px;
+      }
 
       .post {
-        margin: 0 0 90px;
+        margin: 0 0 50px;
+
+        @media (min-width: $bp-small) {
+          margin: 0 0 90px;
+        }
       }
 
       h4 {
-        margin: 0 0 35px;
+        margin: 0 0 15px;
+
+        @media (min-width: $bp-small) {
+          margin: 0 0 35px;
+        }
 
         a {
           text-transform: uppercase;
-          font-size: 30px;
+          font-size: 16px;
           font-family: $open-sans-bold;
           color: #399bda;
           text-decoration: none;
+
+          @media (min-width: $bp-small) {
+            font-size: 30px;
+          }
 
           &:hover {
             text-decoration: underline;
@@ -34,7 +62,11 @@
       }
 
       .info {
-        margin: 0 0 35px;
+        margin: 0 0 15px;
+
+        @media (min-width: $bp-small) {
+          margin: 0 0 35px;
+        }
 
         a {
           color: #399bda;
@@ -47,9 +79,14 @@
 
         span {
           display: inline-block;
-          margin-right: 25px;
-          padding-right: 25px;
+          margin-right: 7px;
+          padding-right: 7px;
           border-right: 1px solid #dedede;
+
+          @media (min-width: $bp-small) {
+            margin-right: 25px;
+            padding-right: 25px;
+          }
 
           &:last-child {
             border-right: none;
@@ -59,16 +96,92 @@
     }
 
     .right-part {
-      width: 260px;
-      display: table-cell;
+      width: 200px;
       background: image-url('bg/right-bg.jpg');
-      padding: 40px 30px;
+      padding: 100px 30px 40px 68px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      @include translate3d(148px, 0, 0);
+      @include transition(all .3s);
+
+      @media (min-width: $bp-small) {
+        padding: 100px 15px 40px 100px;
+        width: 260px;
+        @include translate3d(165px, 0, 0);
+      }
+
+      &.active {
+        padding: 100px 15px 40px;
+        right: 0;
+        @include translate3d(0, 0, 0);
+
+        @media (min-width: $bp-small) {
+          padding: 100px 30px 40px 30px;
+        }
+      }
+
+      .btn-blog {
+        position: absolute;
+        width: 34px;
+        height: 28px;
+        top: 50px;
+        left: 10px;
+
+        @media (min-width: $bp-small) {
+          left: 30px;
+          width: 38px;
+          height: 30px;
+        }
+
+        &.active{
+          left: 15px;
+
+          @media (min-width: $bp-small) {
+            left: 30px;
+          }
+        }
+
+        &:before, &:after {
+          @include pseudo-block($left: 0);
+        }
+
+        &:before {
+          top: 0
+        }
+
+        &:after {
+          bottom: 0;
+        }
+
+        &:before, &:after, span {
+          width: 34px;
+          background: #fff;
+          height: 4px;
+
+          @media (min-width: $bp-small) {
+            width: 40px;
+          }
+        }
+
+        span {
+          position: absolute;
+          top: 50%;
+          @include translateY(-50%);
+        }
+      }
 
       h3 {
         color: #fff;
         text-transform: uppercase;
-        font-size: 36px;
-        margin: 0 0 30px;
+        font-size: 24px;
+        margin: 0 0 15px;
+
+        @media (min-width: $bp-small) {
+          font-size: 36px;
+          margin: 0 0 30px;
+        }
       }
 
       ul {

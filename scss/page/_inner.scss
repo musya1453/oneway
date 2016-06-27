@@ -1,15 +1,39 @@
 .page-inner {
 
   .content-wrapper {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.6;
-    padding: 70px 0 0;
+    padding: 20px 0 0;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    @media (min-width: $bp-small) {
+      font-size: 18px;
+      padding: 70px 0 0;
+    }
 
     .img.pull-right {
-      margin: 0 0 20px 30px;
+      float: none;
+
+      img {
+        max-width: 100%;
+      }
+
+      @media (min-width: $bp-small) {
+        margin: 0 0 20px 30px;
+        float: right;
+      }
+
     }
 
     .list {
+      padding: 0 0 0 10px;
+
+      @media (min-width: $bp-small) {
+        padding: 0 0 0 30px;
+      }
 
       li {
         position: relative;
@@ -29,7 +53,10 @@
     }
 
     .img.pull-right + p {
-      overflow: hidden;
+
+      @media (min-width: $bp-middle) {
+        overflow: hidden;
+      }
     }
 
     h2 {

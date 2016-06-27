@@ -5,10 +5,80 @@
 }
 
 .content-wrapper {
+  position: relative;
+
+  h1 {
+    margin: 0 0 15px;
+    font-size: 26px;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.43);
+
+    @media (min-width: $bp-small) {
+      font-size: 42px;
+      margin: 0 0 30px;
+      text-shadow: none;
+    }
+
+    @media (min-width: $bp-middle) {
+      font-size: 48px;
+    }
+
+    body:not(.front) & {
+      color: #399bda;
+      font-size: 26px;
+      text-transform: uppercase;
+      margin: 0 0 20px;
+      text-shadow: none;
+
+      @media (min-width: $bp-small) {
+        font-size: 42px;
+        margin: 0 0 50px;
+      }
+
+      @media (min-width: $bp-middle) {
+        font-size: 48px;
+        margin: 0 0 75px;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.43);
+
+    @media (min-width: $bp-small) {
+      font-size: 36px;
+      text-shadow: none;
+
+      br {
+        display: block;
+      }
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: $bp-small) {
+        display: block;
+      }
+    }
+
+    body:not(.front) & {
+      color: #399bda;
+      font-size: 22px;
+      margin: 0 0 15px;
+      text-shadow: none;
+
+      @media (min-width: $bp-small) {
+        font-size: 36px;
+        margin: 0 0 30px;
+      }
+    }
+  }
 
   .section-top {
     position: relative;
-    min-height: 400px;
+    min-height: 300px;
 
     .desc {
       position: absolute;
@@ -17,61 +87,81 @@
       right: 0;
       text-align: center;
       color: #fff;
+      z-index: 5;
+      padding: 77px 10px;
 
       @media (min-width: $bp-small) {
         top: 200px;
-      }
-    }
-
-    h1 {
-      margin: 0 0 30px;
-      font-size: 48px;
-
-      body:not(.front) & {
-        color: #399bda;
-        font-size: 48px;
-        text-transform: uppercase;
-        margin: 0 0 75px;
-      }
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 36px;
-
-      body:not(.front) & {
-        color: #399bda;
-        font-size: 36px;
-        margin: 0 0 30px;
+        padding: 0;
       }
     }
 
     img {
-      width: 100%;
+      width: auto;
+      position: relative;
+      left: 50%;
+      height: 300px;
+      display: block;
+      @include translateX(-50%);
+
+      @media (min-width: $bp-small) {
+        height: 580px;
+      }
+
+      @media (min-width: $bp-middle) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
   .section-items {
     background: image-url('bg/items.png') no-repeat center;
     @include background-size(contain);
-    margin-top: -100px;
     position: relative;
 
+    @media (min-width: $bp-small) {
+      margin-top: -100px;
+    }
+
     .container {
-      padding-bottom: 100px;
+      padding-bottom: 40px;
+
+      @media (min-width: $bp-small) {
+        padding-bottom: 100px;
+        text-align: center;
+      }
+
+      @media (min-width: $bp-middle) {
+        text-align: left;
+      }
     }
 
     .item {
-      width: 360px;
-      display: inline-block;
-      margin-right: 25px;
+      max-width: 360px;
+      display: block;
       vertical-align: top;
+      margin: 0 auto 15px;
+      text-align: left;
+
+      @media (min-width: $bp-small) {
+        margin: 0 15px 20px 0;
+        display: inline-block;
+      }
+
+      @media (min-width: $bp-middle) {
+        margin: 0 25px 0 0;
+      }
 
       i {
         display: inline-block;
-        font-size: 36px;
+        font-size: 25px;
         vertical-align: middle;
         margin-right: 15px;
+
+        @media (min-width: $bp-small) {
+          font-size: 36px;
+        }
       }
 
       &:last-child {
@@ -79,15 +169,20 @@
       }
 
       .title {
-        font-size: 28px;
+        font-size: 20px;
         font-family: $open-sans-bold;
         background: #155597;
         @include box-shadow(0px 6px 19px -4px rgba(0, 0, 0, 0.34));
-        padding: 30px;
+        padding: 15px;
         position: relative;
         color: #fff;
         display: block;
         text-decoration: none;
+
+        @media (min-width: $bp-small) {
+          font-size: 28px;
+          padding: 30px;
+        }
 
         &:hover {
           color: #cdd6e3;
@@ -97,13 +192,22 @@
       .item-body {
         background: #215b96;
         color: #fff;
-        padding: 30px 20px;
-        font-size: 16px;
+        padding: 15px 20px;
+        font-size: 14px;
+
+        @media (min-width: $bp-small) {
+          font-size: 16px;
+          padding: 30px 20px;
+        }
 
         h4 {
           margin: 0 0 30px;
-          font-size: 24px;
+          font-size: 20px;
           font-family: $Impact;
+
+          @media (min-width: $bp-small) {
+            font-size: 24px;
+          }
         }
 
         ul {
@@ -125,17 +229,32 @@
 
       .text {
         text-align: center;
-        padding: 30px;
-        font-size: 16px;
+        padding: 16px;
+        font-size: 14px;
         background: #f1faff;
+
+        @media (min-width: $bp-small) {
+          padding: 30px;
+          font-size: 16px;
+        }
       }
     }
   }
 
   .section-links {
     background: #f2f7fd;
-    font-size: 24px;
-    padding: 90px 0;
+    font-size: 16px;
+    padding: 30px 10px;
+
+    @media (min-width: $bp-small) {
+      padding: 50px 10px;
+      font-size: 22px;
+    }
+
+    @media (min-width: $bp-middle) {
+      padding: 90px 0;
+      font-size: 24px;
+    }
 
     a {
       text-decoration: none;
@@ -152,7 +271,11 @@
       margin: 0;
 
       li {
-        margin: 0 0 15px;
+        margin: 0 0 7px;
+
+        @media (min-width: $bp-small) {
+          margin: 0 0 15px;
+        }
 
         a i {
           display: inline-block;
@@ -163,25 +286,49 @@
 
     h3 {
       color: #10477f;
-      font-size: 36px;
+      font-size: 26px;
       font-family: $open-sans-bold;
       text-transform: uppercase;
-      margin: 0 0 60px;
+      margin: 0 0 15px;
+
+      @media (min-width: $bp-small) {
+        font-size: 36px;
+        margin: 0 0 60px;
+      }
     }
 
     .left-part, .right-part {
-      width: 50%;
-      float: left;
+      margin-bottom: 25px;
+
+      @media (min-width: $bp-small) {
+        width: 50%;
+        float: left;
+        margin-bottom: 0;
+      }
     }
 
     .article {
       @include clearfix();
-      margin-bottom: 35px;
+      margin-bottom: 20px;
       display: block;
+
+      @media (min-width: $bp-small) {
+        margin-bottom: 35px;
+      }
 
       .img {
         float: left;
-        margin-right: 24px;
+        margin-right: 15px;
+        width: 70px;
+
+        @media (min-width: $bp-small) {
+          width: auto;
+          margin-right: 24px;
+        }
+
+        img {
+          max-width: 100%;
+        }
       }
 
       .text {
@@ -199,41 +346,109 @@
   }
 
   .section-desc {
-    padding: 135px 0;
+    padding: 30px 10px;
     background: image-url('bg/bg-bot.jpg') no-repeat center;
     @include background-size(cover);
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     color: #fff;
 
+    @media (min-width: $bp-small) {
+      padding: 80px 15px;
+      font-size: 22px;
+    }
+
+    @media (min-width: $bp-middle) {
+      padding: 135px 0;
+      font-size: 24px;
+    }
+
     h2 {
-      font-size: 48px;
+      font-size: 28px;
       font-family: $open-sans-bold;
-      margin: 0 0 30px;
+      margin: 0 0 15px;
+
+      @media (min-width: $bp-small) {
+        font-size: 38px;
+        margin: 0 0 30px;
+      }
+
+      @media (min-width: $bp-middle) {
+        font-size: 48px;
+      }
     }
   }
 
   .section-location {
-    padding: 70px 0 0;
+    padding: 20px 10px 0;
+
+    @media (min-width: $bp-small) {
+      padding: 50px 15px 0;
+    }
+
+    @media (min-width: $bp-middle) {
+      padding: 70px 0 0;
+    }
 
     .map {
-      display: inline-block;
+      display: block;
       vertical-align: top;
+
+      @media (min-width: $bp-small) {
+        width: 46%;
+        display: inline-block;
+      }
+
+      iframe {
+        width: 100%;
+        height: 200px;
+
+        @media (min-width: $bp-small) {
+
+          height: 400px;
+        }
+
+        @media (min-width: $bp-middle) {
+          width: 745px;
+        }
+      }
     }
 
     .items {
-      padding: 40px 0 95px;
+      padding: 20px 0 70px;
+      text-align: center;
+
+      @media (min-width: $bp-small) {
+        padding: 40px 0 95px;
+      }
+
+      @media (min-width: $bp-middle) {
+        text-align: left;
+      }
 
       .contact-item {
-        display: inline-block;
         vertical-align: top;
-        width: 325px;
-        font-size: 18px;
-        margin-right: 75px;
+        max-width: 325px;
+        font-size: 16px;
+        margin: 0 auto 20px;
 
-        &:last-child {
-          margin-right: 0;
+        @media (min-width: $bp-small) {
+          display: inline-block;
+          max-width: 225px;
+          margin: 0 15px 0 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
         }
+
+        @media (min-width: $bp-middle) {
+          max-width: 325px;
+          font-size: 18px;
+          margin: 0 75px 0 0;
+
+        }
+
 
         a {
           color: #666666;
@@ -249,9 +464,12 @@
         }
 
         .img {
-          display: inline-block;
           vertical-align: middle;
-          margin-right: 20px;
+
+          @media (min-width: $bp-small) {
+            margin-right: 20px;
+            display: inline-block;
+          }
         }
 
         .info {
@@ -263,16 +481,26 @@
     }
 
     .item {
-      width: 360px;
-      display: inline-block;
-      margin-right: 25px;
+      max-width: 360px;
       vertical-align: top;
+      width: 100%;
+      display: block;
+      margin: 0 auto 30px;
+
+      @media (min-width: $bp-small) {
+        margin: 0 25px 0 0;
+        display: inline-block;
+      }
 
       i {
         display: inline-block;
         font-size: 36px;
         vertical-align: middle;
         margin-right: 15px;
+
+        @media (min-width: $bp-small) {
+          font-size: 36px;
+        }
       }
 
       &:last-child {
@@ -280,7 +508,7 @@
       }
 
       .title {
-        font-size: 24px;
+        font-size: 18px;
         font-family: $open-sans-bold;
         background: #155597;
         @include box-shadow(0px 6px 19px -4px rgba(0, 0, 0, 0.34));
@@ -290,6 +518,11 @@
         display: block;
         text-decoration: none;
 
+        @media (min-width: $bp-small) {
+          font-size: 24px;
+          padding: 30px;
+        }
+
         &:hover {
           color: #cdd6e3;
         }
@@ -298,19 +531,33 @@
       .item-body {
         background: #215b96;
         color: #fff;
-        padding: 30px 20px;
+        padding: 20px 15px;
         font-size: 16px;
 
+        @media (min-width: $bp-small) {
+          padding: 30px 20px;
+        }
+
         h4 {
-          margin: 0 0 30px;
-          font-size: 24px;
+          margin: 0 0 15px;
+          font-size: 20px;
           font-family: $Impact;
+
+          @media (min-width: $bp-small) {
+            margin: 0 0 30px;
+            font-size: 24px;
+          }
         }
 
         ul {
           padding: 0;
           margin: 0;
           list-style: none;
+          font-size: 14px;
+
+          @media (min-width: $bp-small) {
+            font-size: 16px;
+          }
 
           li {
             margin: 0 0 10px;
@@ -318,7 +565,11 @@
             span {
               display: inline-block;
               font-family: $open-sans-bold;
-              width: 100px;
+              width: 85px;
+
+              @media (min-width: $bp-small) {
+                width: 100px;
+              }
             }
           }
         }
@@ -327,8 +578,17 @@
   }
 
   .section-faq {
-    font-size: 18px;
-    padding: 70px 0 60px;
+    font-size: 15px;
+    padding: 30px 15px 20px;
+
+    @media (min-width: $bp-small) {
+      font-size: 18px;
+      padding: 50px 15px 45px;
+    }
+
+    @media (min-width: $bp-middle) {
+      padding: 70px 0 60px;
+    }
 
     ul {
       list-style: none;
@@ -336,7 +596,11 @@
       padding: 0;
 
       li {
-        margin-bottom: 20px;
+        margin-bottom: 7px;
+
+        @media (min-width: $bp-small) {
+          margin-bottom: 20px;
+        }
 
         &.active {
 
@@ -358,11 +622,15 @@
 
         a {
           position: relative;
-          font-size: 24px;
+          font-size: 18px;
           color: #399bda;
           text-decoration: none;
           padding: 5px 20px 5px 55px;
           display: block;
+
+          @media (min-width: $bp-small) {
+            font-size: 24px;
+          }
 
           &:hover {
             color: #155597;
