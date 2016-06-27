@@ -6,9 +6,10 @@
     initBtnMenu();
   });
 
-  //$(window).resize(function(){
-  //  initMobileMenu()
-  //});
+  $(window).on('resize.once', function () {
+    clearTimeout(this.id);
+    this.id = setTimeout(initMobileMenu, 500);
+  });
 
   function initAccordeon() {
     var $wrapper = $('.section-faq ul li'),
@@ -29,9 +30,20 @@
   }
 
   function initMobileMenu() {
+
+    var $wrapper = $('.dl-submenu');
+
     if ($(window).outerWidth() < 1125) {
       $('#dl-menu').dlmenu();
+
+      for (var i = 0; i < $wrapper.length; i++) {
+
+        if ($wrapper.eq(i).find('.dl-back').length > 1) {
+          $wrapper.find('.dl-back').eq(i + 1).remove();
+        }
+      }
     } else {
+      $wrapper.find('.dl-back').remove();
       return false;
     }
   }
