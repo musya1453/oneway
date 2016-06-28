@@ -5296,6 +5296,10 @@ body:not(.front) .header-wrapper .header-bottom {
     margin: 0 0 90px;
   }
 }
+.page-blog .content-wrapper .left-part .post .date span {
+  margin: 0;
+  padding: 0;
+}
 .page-blog .content-wrapper .left-part .post.hidden {
   display: none;
 }
