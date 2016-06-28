@@ -4,7 +4,32 @@
     initAccordeon();
     initMobileMenu();
     initBtnMenu();
+    initFilter();
   });
+
+  function initFilter() {
+    var $topicbtn = $('.topic-link li a'),
+      $post = $('.post'),
+      $archiveBtn = $('.archive li a');
+
+    $topicbtn.on('click touch', function (e) {
+      e.preventDefault();
+      $post.addClass('hidden');
+      var $this = $(this);
+      $post.find('.topic:contains('+$this.text()+')').parents('.post').removeClass('hidden');
+    });
+
+    $archiveBtn.on('click touch', function(e){
+      e.preventDefault();
+
+      $post.addClass('hidden');
+
+      var $this = $(this);
+      var $btnText = $this.find('span');
+      console.log($this.text());
+      $post.find('.date span:contains('+$btnText.text()+')').parents('.post').removeClass('hidden');
+    })
+  }
 
   $(window).on('resize.once', function () {
     clearTimeout(this.id);
