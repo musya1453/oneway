@@ -3339,7 +3339,7 @@ body:not(.front) .content-wrapper h2 {
   width: auto;
   position: relative;
   left: 50%;
-  height: 300px;
+  height: 385px;
   display: block;
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -3393,8 +3393,11 @@ body:not(.front) .content-wrapper h2 {
 }
 @media (min-width: 768px) {
   .content-wrapper .section-items .item {
-    margin: 0 15px 20px 0;
+    margin: 0 15px 20px;
     display: inline-block;
+  }
+  .content-wrapper .section-items .item:last-child {
+    margin-right: 0;
   }
 }
 @media (min-width: 1142px) {
@@ -3412,9 +3415,6 @@ body:not(.front) .content-wrapper h2 {
   .content-wrapper .section-items .item i {
     font-size: 36px;
   }
-}
-.content-wrapper .section-items .item:last-child {
-  margin-right: 0;
 }
 .content-wrapper .section-items .item .title {
   font-size: 20px;
