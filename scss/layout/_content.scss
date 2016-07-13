@@ -146,7 +146,8 @@
       text-align: left;
 
       @media (min-width: $bp-small) {
-        margin: 0 15px 20px;
+        max-width: 250px;
+        margin: 0 1px 20px;
         display: inline-block;
 
         &:last-child {
@@ -156,6 +157,7 @@
 
       @media (min-width: $bp-middle) {
         margin: 0 25px 0 0;
+        max-width: 360px;
       }
 
       i {
@@ -169,7 +171,6 @@
         }
       }
 
-
       .title {
         font-size: 20px;
         font-family: $open-sans-bold;
@@ -182,6 +183,11 @@
         text-decoration: none;
 
         @media (min-width: $bp-small) {
+          font-size: 23px;
+          padding: 13px;
+        }
+
+        @media (min-width: $bp-middle) {
           font-size: 28px;
           padding: 30px;
         }
@@ -198,17 +204,27 @@
         font-size: 14px;
 
         @media (min-width: $bp-small) {
+          font-size: 14px;
+          padding: 22px 12px;
+        }
+
+        @media (min-width: $bp-middle) {
           font-size: 16px;
           padding: 30px 20px;
         }
 
         h4 {
-          margin: 0 0 30px;
+          margin: 0 0 20px;
           font-size: 20px;
           font-family: $Impact;
 
           @media (min-width: $bp-small) {
+            font-size: 22px;
+          }
+
+          @media (min-width: $bp-middle) {
             font-size: 24px;
+            margin: 0 0 30px;
           }
         }
 
@@ -224,6 +240,15 @@
               display: inline-block;
               font-family: $open-sans-bold;
               width: 100px;
+
+              @media (min-width: $bp-small) {
+                display: block;
+              }
+
+              @media (min-width: $bp-middle) {
+                display: inline-block;
+                width: 100px;
+              }
             }
           }
         }
@@ -236,6 +261,10 @@
         background: #f1faff;
 
         @media (min-width: $bp-small) {
+          padding: 20px;
+        }
+
+        @media (min-width: $bp-middle) {
           padding: 30px;
           font-size: 16px;
         }
@@ -450,7 +479,6 @@
           margin: 0 75px 0 0;
 
         }
-
 
         a {
           color: #666666;

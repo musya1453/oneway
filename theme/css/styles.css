@@ -3393,7 +3393,8 @@ body:not(.front) .content-wrapper h2 {
 }
 @media (min-width: 768px) {
   .content-wrapper .section-items .item {
-    margin: 0 15px 20px;
+    max-width: 250px;
+    margin: 0 1px 20px;
     display: inline-block;
   }
   .content-wrapper .section-items .item:last-child {
@@ -3403,6 +3404,7 @@ body:not(.front) .content-wrapper h2 {
 @media (min-width: 1142px) {
   .content-wrapper .section-items .item {
     margin: 0 25px 0 0;
+    max-width: 360px;
   }
 }
 .content-wrapper .section-items .item i {
@@ -3431,6 +3433,12 @@ body:not(.front) .content-wrapper h2 {
 }
 @media (min-width: 768px) {
   .content-wrapper .section-items .item .title {
+    font-size: 23px;
+    padding: 13px;
+  }
+}
+@media (min-width: 1142px) {
+  .content-wrapper .section-items .item .title {
     font-size: 28px;
     padding: 30px;
   }
@@ -3446,18 +3454,30 @@ body:not(.front) .content-wrapper h2 {
 }
 @media (min-width: 768px) {
   .content-wrapper .section-items .item .item-body {
+    font-size: 14px;
+    padding: 22px 12px;
+  }
+}
+@media (min-width: 1142px) {
+  .content-wrapper .section-items .item .item-body {
     font-size: 16px;
     padding: 30px 20px;
   }
 }
 .content-wrapper .section-items .item .item-body h4 {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   font-size: 20px;
   font-family: "Impact";
 }
 @media (min-width: 768px) {
   .content-wrapper .section-items .item .item-body h4 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1142px) {
+  .content-wrapper .section-items .item .item-body h4 {
     font-size: 24px;
+    margin: 0 0 30px;
   }
 }
 .content-wrapper .section-items .item .item-body ul {
@@ -3473,6 +3493,17 @@ body:not(.front) .content-wrapper h2 {
   font-family: "open-sans-bold";
   width: 100px;
 }
+@media (min-width: 768px) {
+  .content-wrapper .section-items .item .item-body ul li span {
+    display: block;
+  }
+}
+@media (min-width: 1142px) {
+  .content-wrapper .section-items .item .item-body ul li span {
+    display: inline-block;
+    width: 100px;
+  }
+}
 .content-wrapper .section-items .item .text {
   text-align: center;
   padding: 16px;
@@ -3480,6 +3511,11 @@ body:not(.front) .content-wrapper h2 {
   background: #f1faff;
 }
 @media (min-width: 768px) {
+  .content-wrapper .section-items .item .text {
+    padding: 20px;
+  }
+}
+@media (min-width: 1142px) {
   .content-wrapper .section-items .item .text {
     padding: 30px;
     font-size: 16px;
